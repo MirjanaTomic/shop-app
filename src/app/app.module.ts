@@ -9,8 +9,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+
 import { AllProductsComponent } from './all-products/all-products.component';
 import { ProductComponent } from './product/product.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { ProductComponent } from './product/product.component';
     MatInputModule,
     MatIconModule,
     MatToolbarModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
