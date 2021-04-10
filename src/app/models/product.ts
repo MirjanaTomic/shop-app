@@ -2,6 +2,6 @@ export interface Product {
   id: number;
   name: string;
   description: string;
-  defaultImg: string;
+  defaultImage: string;
   images: string[];
 }
