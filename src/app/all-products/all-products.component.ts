@@ -9,21 +9,12 @@ import { ProductsService } from './../services/products.service';
   styleUrls: ['./all-products.component.scss']
 })
 export class AllProductsComponent implements OnInit {
-  products: Product[];
-  productsSub;
+  products$ = this.productService.products$;
 
   constructor(private productService: ProductsService) { 
-    this.productsSub = productService.products$.subscribe(
-      products => {
-        this.products = products;
-      }
-    )
   }
 
   ngOnInit(): void {
-    console.log(this.productService.baseUrl);
-    this.productService.products$;
-    console.log(this.productService.products$);
   }
 
 }
