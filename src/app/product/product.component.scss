@@ -3,3 +3,8 @@
   height: 465px;
   margin-bottom: 30px;
 }
+
+.product-card:hover {
+  transform: translateY(-10px);
+  transition: all .3s ease;
+}
