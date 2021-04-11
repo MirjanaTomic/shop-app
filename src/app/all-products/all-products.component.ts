@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Product } from './../models/product';
 import { ProductsService } from './../services/products.service';
+import { ProductsFilterPipe } from './../pipes/products-filter.pipe';
 
 @Component({
   selector: 'app-all-products',
@@ -10,6 +11,7 @@ import { ProductsService } from './../services/products.service';
 })
 export class AllProductsComponent implements OnInit {
   products$ = this.productService.products$;
+  searchTerm: string;
 
   constructor(private productService: ProductsService) { 
   }

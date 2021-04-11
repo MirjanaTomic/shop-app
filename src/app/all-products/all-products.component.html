@@ -1,12 +1,12 @@
 <div fxLayout="column" class="all-products-container">
   <div class="search-container" fxFlex>
     <mat-form-field appearance="fill"  fxFlex="30">
-      <mat-label>Search products by name or description</mat-label>
-      <input matInput class="bg-white">
+      <mat-label>Search products by name</mat-label>
+      <input type="text" matInput [(ngModel)]="searchTerm" />
       <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
   </div>
   <div *ngIf="products$ | async as products" fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex>
-    <app-product *ngFor="let product of products" [product]="product"></app-product>
+    <app-product *ngFor="let product of products | productsFilter:searchTerm" [product]="product"></app-product>
   </div>
 </div>
